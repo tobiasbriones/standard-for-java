@@ -19,6 +19,8 @@ changes, maintainability, etc., are well-balanced in the Java ecosystem.
 ## Points
 
 - Don't use final for local variables as it should be the default so skip it 
-  and use effectively final instead.
+  and use effectively final instead. Mostly everything must be final by 
+  default, but it's more wrong to copy the `final` boilerplate 100% of the 
+  time than using effectively final.
 - Never use the LHS variable type when using `new` on the RHS.
 - Try to use type inference most of the time.
