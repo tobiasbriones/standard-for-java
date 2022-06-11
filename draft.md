@@ -29,6 +29,8 @@ changes, maintainability, etc., are well-balanced in the Java ecosystem.
   advantage of effectively final for local variables, so only apply this 
   point to end classes. Public classes are more vulnerable to be extended, 
   so add `final` to all public classes, but make `package-private` classes 
-  inside packages, so we take advantage of this point. 
+  inside packages, so we take advantage of this point. If we remove `final` 
+  from public classes that also leads the user think they should extend it. 
+  Use `final` on all utility classes too, even if they are not public.
 - Never use the LHS variable type when using `new` on the RHS.
 - Try to use type inference most of the time.
