@@ -15,3 +15,10 @@ paradigm and general purpose languages.
 Java is best qualified for these use cases in general and for me than any other
 popular general-purpose language because the tradeoffs among features, breaking
 changes, maintainability, etc., are well-balanced in the Java ecosystem. 
+
+## Points
+
+- Don't use final for local variables as it should be the default so skip it 
+  and use effectively final instead.
+- Never use the LHS variable type when using `new` on the RHS.
+- Try to use type inference most of the time.
