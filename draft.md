@@ -22,5 +22,13 @@ changes, maintainability, etc., are well-balanced in the Java ecosystem.
   and use effectively final instead. Mostly everything must be final by 
   default, but it's more wrong to copy the `final` boilerplate 100% of the 
   time than using effectively final.
+- Never use `final` on end-user classes like executable modules or tests 
+  that will never be imported into a different app. `final` should be the 
+  default for classes too, so is the same as the "effectively final" point. 
+  If we remove the `final` modifier from all classes then we don't have the 
+  advantage of effectively final for local variables, so only apply this 
+  point to end classes. Public classes are more vulnerable to be extended, 
+  so add `final` to all public classes, but make `package-private` classes 
+  inside packages, so we take advantage of this point. 
 - Never use the LHS variable type when using `new` on the RHS.
 - Try to use type inference most of the time.
